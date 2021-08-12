@@ -1,0 +1,85 @@
+//style sheet for AllCharacters
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import '../../styles/theme.scss';
+@import "~loaders.css/src/animations/ball-scale-multiple.scss";
+
+//loader stylesheet
+.loader {
+    position:fixed !important;
+    position: absolute;
+    @media(min-width: 767px) {
+      top: 60px;
+    }
+    top: 90px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(#fff, .5);
+    z-index: 2000;
+  }
+
+  //Data Card stylesheet
+  .card-wrapper {
+
+    .card-inner {
+      border: 1px solid #eee;
+      border-image: url('/img/sketchy-border.png') 2 repeat;
+      border-width: 1px;
+      margin-top:15px;
+      padding: 0px;
+      height:230px;
+  
+      .card-img {
+        height: 135px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: border 200ms ease-out;
+        border: 1px solid rgba(255,255,255, 0.5);
+      }
+  
+      .card-title {
+        margin-top:10px;
+        font-size: 12px;
+        font-weight: bold;
+        color: $brand-danger;
+        padding:0 10px;
+        margin-bottom: auto;
+      }
+      .card-description {
+        font-size: 10px;
+        font-weight: 300;
+        color: #787878;
+        padding:0 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 45px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+  
+      }
+  
+    }
+  }
+
+  //Search bar style sheet
+  .mlr-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .form-control {
+    border-radius: 0px;
+    box-shadow: none;
+    &:focus {
+      box-shadow:none;
+      border-color: $brand-warning;
+    }
+  }
+  .btn {
+    border-radius: 0px;
+  }
