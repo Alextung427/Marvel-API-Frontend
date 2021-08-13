@@ -41,11 +41,17 @@ class Character extends Component {
     }
 
     render() {
-        
+        const {character, img, series, comics, urls, loading} = this.state
 
+        const Loader = () => (
+            <div className='loader'>
+                <ReactLoader type='ball-scale-multiple' active={true} />
+            </div>
+        )
 
         return (
             <div>
+                {loading && <Loader/>}
                 
             </div>
         );
